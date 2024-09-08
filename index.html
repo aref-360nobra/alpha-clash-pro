@@ -1,119 +1,138 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alpha Clash Pro</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <!-- custom css -->
-    <link rel="stylesheet" href="style/font.css">
-</head>
+    <link rel="stylesheet" href="style/font.css" />
+  </head>
 
-<body class="font-poppins">
-    <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
-        <!-- HOME SCREEN -->
-        <section id="homeScreen" class="text-white flex flex-col justify-center items-center min-h-screen">
-            <div class="flex-col flex items-center gap-10">
-                <h1 class="text-8xl font-anton uppercase">Alpha Clash Pro</h1>
-                <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button class="btn bg-white text-black" id="playNowBtn">Play Now</button>
+  <body class="font-poppins">
+    <main
+      class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center"
+    >
+      <!-- HOME SCREEN -->
+      <section
+        id="homeScreen"
+        class="text-white flex flex-col justify-center items-center min-h-screen"
+      >
+        <div class="flex-col flex items-center gap-10">
+          <h1 class="text-8xl font-anton uppercase">Alpha Clash Pro</h1>
+          <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+          <button class="btn bg-white text-black" id="playNowBtn">
+            Play Now
+          </button>
+        </div>
+      </section>
+      <!-- play ground start-->
+      <section id="playGround" class="hidden">
+        <div class="flex flex-col items-center gap-20 lg:pt-5">
+          <!-- screen start -->
+          <div
+            class="artboard artboard-horizontal phone-6 border-[15px] border-[#010313CC] bg-[#FFFFFFB3] rounded-2xl"
+          >
+            <div class="flex justify-center">
+              <p class="bg-[#2F2941] text-white p-2 rounded-b-xl">
+                Don't watch keyboard while playing...
+              </p>
             </div>
-        </section>
-        <!-- play ground start-->
-        <section id="playGround" class="hidden">
-            <div class="flex flex-col items-center gap-20 lg:pt-5">
-                <!-- screen start -->
-                <div
-                    class="artboard artboard-horizontal phone-6 border-[15px] border-[#010313CC] bg-[#FFFFFFB3] rounded-2xl">
-                    <div class="flex justify-center">
-                        <p class="bg-[#2F2941] text-white p-2 rounded-b-xl">Don't watch keyboard while playing...</p>
-                    </div>
-                    <div class="flex justify-center items-center h-full">
-                        <P class="text-black text-9xl font-bold uppercase" id="currentAlphabet">Y</P>
-                    </div>
-                </div>
-                <!-- screen end -->
-                <!-- keyboard start-->
-                <div>
-                    <div class="my-1 flex w-full justify-center gap-1">
-                        <kbd class="kbd" id="q">q</kbd>
-                        <kbd class="kbd" id="w">w</kbd>
-                        <kbd class="kbd" id="e">e</kbd>
-                        <kbd class="kbd" id="r">r</kbd>
-                        <kbd class="kbd" id="t">t</kbd>
-                        <kbd class="kbd" id="y">y</kbd>
-                        <kbd class="kbd" id="u">u</kbd>
-                        <kbd class="kbd" id="i">i</kbd>
-                        <kbd class="kbd" id="o">o</kbd>
-                        <kbd class="kbd" id="p">p</kbd>
-                    </div>
-
-                    <div class="my-1 flex w-full justify-center gap-1">
-                        <kbd class="kbd" id="a">a</kbd>
-                        <kbd class="kbd" id="s">s</kbd>
-                        <kbd class="kbd" id="d">d</kbd>
-                        <kbd class="kbd" id="f">f</kbd>
-                        <kbd class="kbd" id="g">g</kbd>
-                        <kbd class="kbd" id="h">h</kbd>
-                        <kbd class="kbd" id="j">j</kbd>
-                        <kbd class="kbd" id="k">k</kbd>
-                        <kbd class="kbd" id="l">l</kbd>
-                    </div>
-                    <div class="my-1 flex w-full justify-center gap-1">
-                        <kbd class="kbd" id="z">z</kbd>
-                        <kbd class="kbd" id="x">x</kbd>
-                        <kbd class="kbd" id="c">c</kbd>
-                        <kbd class="kbd" id="v">v</kbd>
-                        <kbd class="kbd" id="b">b</kbd>
-                        <kbd class="kbd" id="n">n</kbd>
-                        <kbd class="kbd" id="m">m</kbd>
-                        <kbd class="kbd" id="/">/</kbd>
-                    </div>
-                </div>
-                <!-- keyboard end-->
-
-                <!-- life && score -->
-                <div class="flex justify-between w-3/4">
-                    <button class="btn bg-[#894189] border-0 text-white rounded-full hover:text-black">
-                        Life
-
-                        <img src="images/loveWithSpark.svg" alt="">
-                        <span>1</span>
-                    </button>
-                    <button class="btn bg-[#360490] border-0 text-white rounded-full hover:text-black">
-                        Score
-                        <img src="images/monetization_on.svg" alt="">
-                        <span>1</span>
-                    </button>
-                </div>
-
+            <div class="flex justify-center items-center h-full">
+              <p
+                class="text-black text-9xl font-bold uppercase"
+                id="currentAlphabet"
+              >
+                Y
+              </p>
+            </div>
+          </div>
+          <!-- screen end -->
+          <!-- keyboard start-->
+          <div class="uppercase">
+            <div class="my-1 flex w-full justify-center gap-1">
+              <kbd class="kbd" id="q">q</kbd>
+              <kbd class="kbd" id="w">w</kbd>
+              <kbd class="kbd" id="e">e</kbd>
+              <kbd class="kbd" id="r">r</kbd>
+              <kbd class="kbd" id="t">t</kbd>
+              <kbd class="kbd" id="y">y</kbd>
+              <kbd class="kbd" id="u">u</kbd>
+              <kbd class="kbd" id="i">i</kbd>
+              <kbd class="kbd" id="o">o</kbd>
+              <kbd class="kbd" id="p">p</kbd>
             </div>
 
-        </section>
-        <!-- play ground end -->
-        <!-- score section start -->
-        <section class="score justify-center items-center min-h-screen hidden">
-            <div class="text-center space-y-6 bg-[#FFFFFF33] p-5 rounded-lg">
-                <h1 class="text-8xl text-white">
-                    <span class="font-extrabold">Score:</span>
-                    <span>14</span>
-                </h1>
-                <button class="btn">Play Again</button>
-                <p class="text-white">Practice will make you pro</p>
-
+            <div class="my-1 flex w-full justify-center gap-1">
+              <kbd class="kbd" id="a">a</kbd>
+              <kbd class="kbd" id="s">s</kbd>
+              <kbd class="kbd" id="d">d</kbd>
+              <kbd class="kbd" id="f">f</kbd>
+              <kbd class="kbd" id="g">g</kbd>
+              <kbd class="kbd" id="h">h</kbd>
+              <kbd class="kbd" id="j">j</kbd>
+              <kbd class="kbd" id="k">k</kbd>
+              <kbd class="kbd" id="l">l</kbd>
             </div>
-        </section>
+            <div class="my-1 flex w-full justify-center gap-1">
+              <kbd class="kbd" id="z">z</kbd>
+              <kbd class="kbd" id="x">x</kbd>
+              <kbd class="kbd" id="c">c</kbd>
+              <kbd class="kbd" id="v">v</kbd>
+              <kbd class="kbd" id="b">b</kbd>
+              <kbd class="kbd" id="n">n</kbd>
+              <kbd class="kbd" id="m">m</kbd>
+              <kbd class="kbd" id="/">/</kbd>
+            </div>
+          </div>
+          <!-- keyboard end-->
+
+          <!-- life && score -->
+          <div class="flex justify-between w-3/4">
+            <button
+              class="btn bg-[#894189] border-0 text-white rounded-full hover:text-black"
+            >
+              Life
+
+              <img src="images/loveWithSpark.svg" alt="" />
+              <span>1</span>
+            </button>
+            <button
+              class="btn bg-[#360490] border-0 text-white rounded-full hover:text-black"
+            >
+              Score
+              <img src="images/monetization_on.svg" alt="" />
+              <span>1</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- play ground end -->
+      <!-- score section start -->
+      <section class="score justify-center items-center min-h-screen hidden">
+        <div class="text-center space-y-6 bg-[#FFFFFF33] p-5 rounded-lg">
+          <h1 class="text-8xl text-white">
+            <span class="font-extrabold">Score:</span>
+            <span>14</span>
+          </h1>
+          <button class="btn">Play Again</button>
+          <p class="text-white">Practice will make you pro</p>
+        </div>
+      </section>
     </main>
     <script src="js/utility.js"></script>
     <script src="js/alphaClash.js"></script>
-</body>
-
+  </body>
 </html>
