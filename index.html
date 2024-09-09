@@ -107,27 +107,32 @@
               Life
 
               <img src="images/loveWithSpark.svg" alt="" />
-              <span>1</span>
+              <span id="life">4</span>
             </button>
             <button
               class="btn bg-[#360490] border-0 text-white rounded-full hover:text-black"
             >
               Score
               <img src="images/monetization_on.svg" alt="" />
-              <span>1</span>
+              <span id="currentScore">0</span>
             </button>
           </div>
         </div>
       </section>
       <!-- play ground end -->
       <!-- score section start -->
-      <section class="score justify-center items-center min-h-screen hidden">
+      <section
+        id="scoreBoard"
+        class="flex justify-center items-center min-h-screen hidden"
+      >
         <div class="text-center space-y-6 bg-[#FFFFFF33] p-5 rounded-lg">
           <h1 class="text-8xl text-white">
             <span class="font-extrabold">Score:</span>
-            <span>14</span>
+            <span id="score">14</span>
           </h1>
-          <button class="btn">Play Again</button>
+          <button class="btn" id="playAgain">
+            Play Again
+          </button>
           <p class="text-white">Practice will make you pro</p>
         </div>
       </section>
