@@ -8,6 +8,10 @@ document.getElementById("playNowBtn").addEventListener("click", function () {
 });
 function handleKeyUpEvent(event) {
   playerPressed = event.key;
+  console.log("player pressed", playerPressed);
+  // terminate the game on tap Esc
+  if (playerPressed === "Escape") gameOver();
+
   const currentAlphabetElement = document.getElementById("currentAlphabet");
   const expectedAlphabet = currentAlphabetElement.innerText.toLowerCase();
   // console.log(expectedAlphabet);
