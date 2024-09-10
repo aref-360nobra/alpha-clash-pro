@@ -81,10 +81,8 @@ function gameOver() {
   document.getElementById("playAgain").addEventListener("click", function () {
     play();
   });
-}
 
-// function playAgain(){
-//   hideElementById("scoreBoard");
-//   showElementById("play-ground");
-//   continueGame();
-// }
+  const currentAlphabet = getElementTextByID("currentAlphabet");
+  // console.log(currentAlphabet);
+  removeClassFromClassListById(currentAlphabet, "bg-orange-400");
+}

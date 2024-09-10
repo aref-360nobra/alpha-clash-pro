@@ -29,3 +29,9 @@ function setTextElementValueByID(elementID, value) {
   const element = document.getElementById(elementID);
   element.innerText = value;
 }
+
+function getElementTextByID(elementID) {
+  const element = document.getElementById(elementID);
+  const text = element.innerText;
+  return text;
+}
